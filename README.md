@@ -9,3 +9,6 @@ Abstract of the talk in Chinese and English:
 Slides Link:
 
 Ref:
+
+1. [Python Kafka Client Benchmarking by activisiongamescience at 20160615](http://activisiongamescience.github.io/2016/06/15/Kafka-Client-Benchmarking/)
+2.
