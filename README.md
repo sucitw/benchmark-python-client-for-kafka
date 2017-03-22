@@ -11,4 +11,5 @@ Slides Link:
 Ref:
 
 1. [Python Kafka Client Benchmarking by activisiongamescience at 20160615](http://activisiongamescience.github.io/2016/06/15/Kafka-Client-Benchmarking/)
-2.
+2. [Pykafka](http://pykafka.readthedocs.io/en/latest/)
+3. [kafka-python](https://github.com/dpkp/kafka-python)
