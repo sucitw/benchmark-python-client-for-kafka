@@ -16,3 +16,8 @@ bootstrap_servers = 'localhost:9092' # change if your brokers live else where
 
 producer_timings = {}
 consumer_timings = {}
+
+#topic
+topic_pk = 'pycontw2017-pykafka-topic'
+topic_kp = 'pycontw2017-kafkapython-topic'
+topic_ckp = 'pycontw2017-confluent-kafka-topic'

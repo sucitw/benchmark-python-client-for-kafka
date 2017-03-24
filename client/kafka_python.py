@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-    client_pykafka.py
+    kafka_python.py
     ~~~~~~~~~~~~
-    benchmarking performance of pykafka client
+    benchmarking performance of kafka_python client
 
 """
 import time
 from kafka import KafkaProducer
-from .settings import bootstrap_servers, msg_count, msg_payload
+from .settings import bootstrap_servers, msg_count, msg_payload, topic_kp
 
+topic = topic_kp
 
-def python_kafka_producer_performance(topic='pycontw2017-pykafka-test-topic'):
+def python_kafka_producer_performance(topic=topic):
     producer = KafkaProducer(bootstrap_servers=bootstrap_servers)
     print("\n>>> Connect Kafak in {} by kafka-python as producer". format(bootstrap_servers))
     producer_start = time.time()
@@ -24,7 +25,7 @@ def python_kafka_producer_performance(topic='pycontw2017-pykafka-test-topic'):
 
 from kafka import KafkaConsumer
 
-def python_kafka_consumer_performance(topic='pycontw2017-pykafka-test-topic'):
+def python_kafka_consumer_performance(topic=topic):
 
     print("\n>>> Connect Kafak in {} by kafka-python as consumer". format(bootstrap_servers))
 

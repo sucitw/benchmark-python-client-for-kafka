@@ -7,10 +7,11 @@
 """
 import time
 from pykafka import KafkaClient
-from .settings import bootstrap_servers, msg_count, msg_payload
+from .settings import bootstrap_servers, msg_count, msg_payload, topic_pk
 
-def pykafka_producer_performance(use_rdkafka=False,
-                                 topic='pycontw2017-pykafka-test-topic'):
+topic = topic_pk
+
+def pykafka_producer_performance(use_rdkafka=False,topic=topic):
 
     # Setup client
     client = KafkaClient(hosts=bootstrap_servers)
@@ -30,8 +31,7 @@ def pykafka_producer_performance(use_rdkafka=False,
     return time.time() - produce_start
 
 
-def pykafka_consumer_performance(use_rdkafka=False,
-                                 topic='pycontw2017-pykafka-test-topic'):
+def pykafka_consumer_performance(use_rdkafka=False, topic=topic):
     # Setup client
     client = KafkaClient(hosts=bootstrap_servers)
     topic = client.topics[topic.encode('UTF-8')]
