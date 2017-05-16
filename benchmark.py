@@ -9,6 +9,7 @@
 import time
 import client.pykafka as pykafka
 import client.kafka_python as kpython
+import client.confluent_kafka_python as ckpython
 
 
 producer_timings = {}
@@ -44,3 +45,12 @@ calculate_thoughput(producer_timings['python_kafka_producer'])
 _ = kpython.python_kafka_consumer_performance()
 consumer_timings['python_kafka_consumer'] = kpython.python_kafka_consumer_performance()
 calculate_thoughput(consumer_timings['python_kafka_consumer'])
+
+
+# confluent-kafka-python
+producer_timings['confluent_kafka_producer'] = ckpython.confluent_kafka_producer_performance()
+calculate_thoughput(producer_timings['confluent_kafka_producer'])
+
+_ = confluent_kafka_consumer_performance() # Warm cache
+consumer_timings['confluent_kafka_consumer'] = ckpython.confluent_kafka_consumer_performance()
+calculate_thoughput(consumer_timings['confluent_kafka_consumer'])

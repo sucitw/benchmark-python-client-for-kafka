@@ -6,14 +6,14 @@
 
 """
 import time
-from kafka import KafkaProducer
+from kafka import KafkaProducer, KafkaConsumer
 from .settings import bootstrap_servers, msg_count, msg_payload, topic_kp
 
 topic = topic_kp
 
 def python_kafka_producer_performance(topic=topic):
     producer = KafkaProducer(bootstrap_servers=bootstrap_servers)
-    print("\n>>> Connect Kafak in {} by kafka-python as producer". format(bootstrap_servers))
+    print("\n>>> Connect Kafka in {} by kafka-python as producer". format(bootstrap_servers))
     producer_start = time.time()
 
     for i in range(msg_count):
@@ -23,11 +23,9 @@ def python_kafka_producer_performance(topic=topic):
 
     return time.time() - producer_start
 
-from kafka import KafkaConsumer
-
 def python_kafka_consumer_performance(topic=topic):
 
-    print("\n>>> Connect Kafak in {} by kafka-python as consumer". format(bootstrap_servers))
+    print("\n>>> Connect Kafka in {} by kafka-python as consumer". format(bootstrap_servers))
 
     consumer = KafkaConsumer(
         bootstrap_servers=bootstrap_servers,

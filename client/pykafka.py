@@ -17,7 +17,7 @@ def pykafka_producer_performance(use_rdkafka=False,topic=topic):
     client = KafkaClient(hosts=bootstrap_servers)
     topic = client.topics[topic.encode('UTF-8')]
     producer = topic.get_producer(use_rdkafka=use_rdkafka)
-    print("\n>>> Connect Kafak in {} by pykafka as producer".
+    print("\n>>> Connect Kafka in {} by pykafka as producer".
           format(bootstrap_servers))
 
     msgs_produced = 0
@@ -35,7 +35,7 @@ def pykafka_consumer_performance(use_rdkafka=False, topic=topic):
     # Setup client
     client = KafkaClient(hosts=bootstrap_servers)
     topic = client.topics[topic.encode('UTF-8')]
-    print("\n>>> Connect Kafak in {} by pykafka as consumer".
+    print("\n>>> Connect Kafka in {} by pykafka as consumer".
           format(bootstrap_servers))
 
     msg_consumed_count = 0
