@@ -11,7 +11,7 @@
 msg_count = 1000000
 msg_size = 100
 msg_payload = ('pycontw 2017' * 20).encode()[:msg_size]
-bootstrap_servers = '192.168.99.100:9092' # change if your brokers live else where
+bootstrap_servers = {broker ip} #'192.168.99.101:9092' # change if your brokers live else where
 
 
 producer_timings = {}
