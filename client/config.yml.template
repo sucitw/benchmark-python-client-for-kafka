@@ -1,0 +1,7 @@
+KAFKA:
+    BOOTSTRAP_SERVERS:  # change if your brokers live else where
+TOPICS:
+    TOPICS: topic
+    MSG: msg_payload
+    MSG_SIZE: 100
+    MSG_COUNT: 1000000
