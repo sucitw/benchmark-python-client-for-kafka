@@ -12,3 +12,4 @@ Ref:
 2. [Pykafka](http://pykafka.readthedocs.io/en/latest/) mainly maintained by Dana Powers
 3. [kafka-python](https://github.com/dpkp/kafka-python) maintained by Parse.ly
 4. [confluent-kafka-python](http://docs.confluent.io/current/clients/index.html) maintained by Confluent
+5. [Running Apache kafka on docker](https://medium.com/@suci/running-apache-kafka-on-docker-c312ebd70413)
