@@ -18,7 +18,6 @@ with open(cert, 'r') as myfile:
 with open(pkey, 'r') as myfile:
     CLOUDKARAFKA_PRIVATE_KEY=myfile.read()
 
-
 # Write the client cert from the environment variables
 # to files on disk and then load them into the context
 with open("/tmp/client.pem", "w") as f:
