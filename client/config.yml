@@ -1,0 +1,10 @@
+# configuration for connecting kafka broker by clients
+# change the values based on your need and brokers
+KAFKA:
+    BOOTSTRAP_SERVERS: 192.168.99.100:9092 # change if your brokers live else where
+TOPICS:
+    TOPICS: test 
+    MSG: test99
+    MSG_SIZE: 100
+    MSG_COUNT: 1000000
+
